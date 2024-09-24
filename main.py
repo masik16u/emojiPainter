@@ -81,7 +81,7 @@ def get_distance_between_colors(color1: tuple, color2: tuple) -> float:
 # # Get emojis list from file
 # emojis = get_text_from_file("emojis.txt")
 
-emojis = "🟥🟪🟦🟩🟨🟧🔴🟠🟡🟢🔵🟣❤️🧡💛💚💙💜"
+emojis = "🟥🟪🟦🟩🟨🟧🔴🟠🟡🟢🔵🟣❤️🧡💛💚💙💜💙💎🧊💎💙🤍🪽☁︎🐻‍❄️🫧💭🎮🕹️👾💗🎀🌸💖💗🥰💞💚🍵🤍💿🖤📢❗🚨⬜⚪⚫⬛💚✅🎄🍀🌲🐍🌻🍯🐝💛"
 
 # Convert emojis to colors
 colors = [(get_center_color(x, MeasureMode.MEAN), x) for x in emojis if x in unicode_codes.EMOJI_DATA]
@@ -89,7 +89,7 @@ colors = [(get_center_color(x, MeasureMode.MEAN), x) for x in emojis if x in uni
 print(colors)
 
 # Get image to convert to emojis
-image = Image.open("test_image.jpg", "r")
+image = Image.open("test_image_2.png", "r")
 
 # Resize image to the size in emojis
 image = image.resize((20, 20))
@@ -116,6 +116,8 @@ for image_pixel_row in image_pixels:
         image_pixel_row[image_pixel] = best_match_color[1]
 
     print("".join(image_pixel_row))
+
+# old stinky code
 
 # pixelWidth = 1
 #

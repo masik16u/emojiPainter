@@ -6,7 +6,7 @@ from emoji import unicode_codes
 from statistics import mean, median, mode
 from math import *
 
-font = ImageFont.truetype("NotoColorEmoji.ttf", 109)
+font = ImageFont.truetype("NotoColorEmoji/NotoColorEmoji.ttf", 109)
 
 
 def get_center_color(emoji: str, measure: int) -> tuple:
